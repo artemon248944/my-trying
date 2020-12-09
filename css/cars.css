@@ -1,0 +1,293 @@
+/*--------MAIN----------*/
+
+.main {
+    background-color: #f8f8fc;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: minmax(50px, auto) 1fr;
+    grid-template-areas: '. description .''. vehicles .';
+}
+
+.main__description {
+    grid-area: description;
+}
+
+.main__description h1 {
+    text-align: center;
+}
+
+.main__vehicles {
+    grid-area: vehicles;
+    background-color: white;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    box-shadow: 0px 0px 5px 5px rgb(201, 200, 200);
+    margin-bottom: 15px;
+}
+
+.car-list ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*--------MAIN----------виды авто-------*/
+
+.car-list li {
+    list-style: none;
+}
+
+.car-list li a {
+    display: flex;
+    border: 1px solid rgb(172, 172, 172);
+    width: 240px;
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 10px;
+    background: rgb(233, 232, 232);
+    background: linear-gradient(0deg, rgba(233, 232, 232, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    align-items: center;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+.car-list li a:hover {
+    background: rgb(193, 193, 193);
+    background: linear-gradient(0deg, rgba(193, 193, 193, 1) 0%, rgba(231, 230, 230, 1) 100%);
+}
+
+.type__more-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cars-type {
+    position: relative;
+    display: block;
+}
+
+.cars-type:hover .hidden-type {
+    position: absolute;
+    left: 100%;
+    display: block;
+}
+
+.cars-type:hover .hidden-type a {
+    margin: 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+.hidden-type {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 0%;
+    width: max-content;
+}
+
+.one-position {
+    border-bottom: 1px solid rgb(202, 201, 201);
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'img head''img book''img spec';
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.position-img {
+    grid-area: img;
+}
+
+.position-img img {
+    max-width: 200px;
+}
+
+.position-head {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position-head p:first-child {
+    font-size: 1.3em;
+}
+
+.position-rent {
+    grid-area: book;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(253, 228, 0);
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.position-rent p,
+.position-head p {
+    display: block;
+    margin: 5px 0px;
+}
+
+.position-spec {
+    grid-area: spec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.position-spec div {
+    margin-right: 5px;
+}
+
+.description {
+    margin-right: 5px;
+}
+
+.position-rent {
+    padding: 0px 5px;
+}
+
+.property-changed {
+    padding-left: 5px;
+    color: rgb(160, 158, 158);
+}
+
+.description__detalis a {
+    color: rgb(87, 87, 255);
+}
+
+.button-book {
+    color: white;
+    background: rgb(0, 0, 0);
+}
+
+.button-book:hover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(71, 71, 71, 1) 28%, rgba(74, 74, 74, 1) 51%, rgba(66, 65, 65, 1) 68%, rgba(0, 0, 0, 1) 100%);
+    transition: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .main__vehicles {
+        margin: 0px;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .position-rent {
+        flex-wrap: wrap;
+    }
+    .position-rent p {
+        width: 100%;
+    }
+    .position-spec {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .position-spec {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .description__car-type,
+    .description__mileage,
+    .description__detalis {
+        margin-bottom: 5px;
+    }
+    .position-head p:first-child {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /**/
+    .main__vehicles {
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+    }
+    .position-spec {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    .hidden-type {
+        display: none;
+    }
+    .cars-type:hover .hidden-type {
+        left: 0%;
+        top: 100%;
+        z-index: 1;
+    }
+    .cars-type:hover .hidden-type a {
+        width: 240px;
+    }
+    .car-list li a {
+        width: 100%;
+    }
+    .car-list ul:first-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .car-list ul:first-child .all-cars {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rent-date {
+        display: block;
+        width: 100%;
+        padding: 0px;
+    }
+    .position-spec {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    .one-position {
+        margin: 0px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'img img' 'head head' 'book book' 'spec spec';
+    }
+    .rent-date {
+        display: inline;
+    }
+    .cars-type:hover .hidden-type a {
+        display: none;
+    }
+    .car-list ul:first-child {
+        grid-template-columns: 1fr;
+    }
+    .car-list ul:first-child .all-cars {
+        grid-area: inherit;
+    }
+    .position-spec {
+        grid-template-columns: repeat(auto-fill, 180px);
+        grid-template-rows: auto;
+    }
+    .position-img {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .rent-date {
+        display: block;
+        width: 100%;
+        padding: 0px;
+    }
+}

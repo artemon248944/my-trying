@@ -1,0 +1,373 @@
+    /*--------MAIN----------*/
+    
+    .main {
+        background-color: #f8f8fc;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+        grid-template-rows: repeat(5, minmax(50px, auto));
+        grid-template-areas: 'calc calc calc' '. vehicles .' '. call .' '. steps .' '. service .';
+        justify-content: center;
+    }
+    
+    .main__calculation {
+        grid-area: calc;
+        max-width: 100vw;
+        max-height: 500px;
+        overflow: hidden;
+        position: relative;
+        min-height: min-content;
+        min-height: 323px;
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .main__calculation .calculation__wrapper {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .main__calculation .calculation__form {
+        max-width: 450px;
+        transform: translate(0%, 0%);
+        padding-right: 10px;
+    }
+    
+    .main__calculation .calculation__form label {
+        color: white;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+    
+    .main__calculation .calculation__form select,
+    .main__calculation .calculation__form input {
+        height: 35px;
+        border-radius: 3px;
+        border: 1px solid gray;
+        margin: 5px;
+    }
+    
+    .main__calculation .calculation__form input {
+        padding-left: 5px;
+    }
+    
+    .main__calculation .calculation__form select {
+        width: 100%;
+    }
+    
+    .main__calculation .calculation__form .button__calculate {
+        width: 100%;
+        margin-left: 5px;
+    }
+    
+    .main__calculation .calculation__form h2 {
+        color: white;
+        font-weight: 300;
+        font-size: 1.8em;
+        margin-left: 5px;
+    }
+    
+    .main__img-filter {
+        grid-area: 1 / 1 / 2 / 4;
+        position: relative;
+    }
+    
+    .main__img-filter::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #333333);
+        opacity: 0.8;
+    }
+    
+    .main__calculation img {
+        width: 100%;
+        display: block;
+        min-height: 355px;
+        object-fit: cover;
+        animation: road 40s;
+    }
+    
+    @keyframes road {
+        from {
+            transform: scale(1);
+            transform-origin: top;
+        }
+        to {
+            transform: scale(1.2);
+            transform-origin: bottom;
+        }
+    }
+    
+    .main_call {
+        grid-area: call;
+    }
+    
+    .main__steps {
+        grid-area: steps;
+    }
+    /*--------MAIN----------виды авто-------*/
+    
+    .main__vehicles {
+        grid-area: vehicles;
+        background-color: white;
+        margin: 0px 10px 15px 10px;
+        padding: 20px 50px 50px;
+        box-shadow: 0px 6px 7px 0px #e9e8e8;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .main__vehicles h1 {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 3em;
+    }
+    /*--------MAIN----------один из видов авто---*/
+    
+    .main__type {
+        width: 280px;
+        height: 350px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr auto;
+    }
+    /*--------MAIN----------логотип и описание это ссылка---*/
+    
+    .main__type .vehical__logo {
+        align-self: flex-end;
+    }
+    
+    .main__type .vehical__logo a {
+        display: block;
+        text-decoration: none;
+    }
+    
+    .main__type .vehical__logo a img {
+        width: 100%;
+        height: 100%;
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
+    
+    .main__type .vehical__logo a img:hover {
+        transform: scale(1.2);
+    }
+    
+    .main__type .vehical__logo a p {
+        padding: 5px;
+        font-size: large;
+        font-weight: 600;
+    }
+    
+    .main__type .vehical__logo a p:last-child {
+        background-color: rgb(253, 228, 0);
+        font-size: initial;
+        font-style: oblique;
+    }
+    /*--------MAIN----------символы характеристики видов авто---*/
+    
+    .main__type .vehical__symbols {
+        display: -webkit-flex;
+        display: flex;
+        height: 50px;
+        background-color: #f8f8fc;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(97, 95, 95);
+        border: 1px solid rgb(170, 170, 170);
+    }
+    
+    .symbol__people,
+    .symbol__baggage,
+    .symbol__door,
+    .symbol__transmission {
+        width: 25%;
+        border: 1px solid rgb(170, 170, 170);
+        position: relative;
+        transition-property: background;
+        transition-duration: 0.5s;
+    }
+    
+    .symbol__people:hover,
+    .symbol__baggage:hover,
+    .symbol__door:hover,
+    .symbol__transmission:hover {
+        background-color: yellow;
+        cursor: default;
+    }
+    /*---класс-модификатор-вертикальное и горизонтальное центрирование*/
+    
+    .centered__absolute {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .main__service {
+        grid-area: service;
+    }
+    
+    .main_call {
+        text-align: center;
+        padding: 10px 0px;
+    }
+    
+    .main_call p {
+        font-size: 3em;
+        margin: 15px 0px;
+    }
+    
+    .main__button-call {
+        height: 70px;
+        width: auto;
+        font-size: 1.2em;
+        padding: 0px 15px;
+        border-radius: 10px;
+    }
+    
+    .button-step {
+        font-size: 1.2em;
+        padding: 0px 15px;
+        border-radius: 10px;
+    }
+    /*-----------Этапы получания авто--------*/
+    
+    .main__steps h2,
+    .main__service h2 {
+        text-align: center;
+        font-size: 3em;
+        display: block;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px #e9e8e8;
+        padding: 10px 0px;
+    }
+    
+    .main__steps-visual,
+    .option__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .main__steps-visual .step,
+    .service__option {
+        max-width: 100px;
+        text-align: center;
+    }
+    
+    .main__steps-visual .step span,
+    .service__option span {
+        font-size: 5em;
+        color: rgb(66, 66, 66);
+    }
+    /*-----------Стрелка--------*/
+    
+    .main__arrow {
+        height: 0px;
+        width: 50px;
+        border: 2px solid black;
+        position: relative;
+        margin: 10px 0px;
+        transform: translateY(2em);
+    }
+    
+    .main__arrow::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -9px;
+        left: 28px;
+        height: 15px;
+        width: 15px;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+        transform: rotate(45deg);
+    }
+    /*-----------кнопки шагов--------*/
+    
+    .steps__buttons {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button-step {
+        display: inline-block;
+        height: 50px;
+        margin-left: 20px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .main__calculation .calculation__wrapper {
+            justify-content: center;
+        }
+        .main__type {
+            width: 310px;
+        }
+        .main__vehicles {
+            margin: 0px;
+        }
+        .main__steps-visual,
+        .option__wrapper {
+            flex-wrap: wrap;
+        }
+        .service__option {
+            max-width: none;
+            width: 150px;
+        }
+        .main__vehicles h1 {
+            font-size: 2.5em;
+        }
+        .main__steps p {
+            padding-left: 5px;
+        }
+    }
+    
+    @media screen and (max-width: 533px) {
+        .main__calculation img {
+            animation: none;
+        }
+        .main__vehicles h1 {
+            font-size: 2em;
+        }
+        .main_call p {
+            font-size: 2em;
+        }
+        .main__vehicles {
+            padding: 20px 15px;
+        }
+        .main__arrow {
+            display: none;
+        }
+        .steps__buttons .button {
+            font-size: 1em;
+        }
+    }
+    
+    @media screen and (max-width: 360px) {
+        .steps__buttons {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .button-step {
+            width: 295px;
+        }
+        .button-step {
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+        .main__calculation img {
+            min-height: 435px;
+        }
+        .main__calculation .calculation__form label {
+            display: block;
+        }
+    }

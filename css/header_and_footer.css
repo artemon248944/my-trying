@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:checked a:visited a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: rgb(80, 80, 80);
+}
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header ' ' main ' 'footer';
+    align-content: space-between;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+
+/*----кнопка Наверх---*/
+
+.top-link {
+    visibility: hidden;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+}
+
+.top-link-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.top-link img {
+    height: 50px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    background-color: rgb(129, 129, 129);
+    border-radius: 5px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+
+/*------HEADER-------*/
+
+.header {
+    background-color: #e9e8e8;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-areas: '. wrapper .';
+    justify-content: center;
+}
+
+.header__wrapper {
+    grid-area: wrapper;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*-----HEADER----все,относящееся к телефонам-----*/
+
+.header__contacts a {
+    color: rgb(65, 65, 65);
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.header__contacts {
+    justify-self: left;
+    flex-grow: 1;
+}
+
+
+/*-----HEADER----все,относящееся к логотипу-----*/
+
+.header__logo {
+    justify-self: left;
+    width: max-content;
+}
+
+.header__logo-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.header__logo-link a {
+    display: block;
+}
+
+.header__logo-link a img {
+    width: 150px;
+}
+
+
+/*-----HEADER----все,относящееся к меню-----*/
+
+.header__menu ul {
+    margin: 0px;
+    display: table;
+    padding: 0px;
+}
+
+.header__menu li {
+    display: inline-block;
+}
+
+.header__menu li a {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px 5px;
+    text-decoration: none;
+    color: black;
+    border-top: 5px solid #e9e8e8;
+}
+
+.header__menu li a:hover {
+    transition-property: background, border-top;
+    transition-duration: 0.5s;
+    border-top: 5px solid yellow;
+    background: rgb(250, 250, 249);
+    box-shadow: 0px -17px 20px -6px inset #eceae9;
+}
+
+.header__menu li a:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.4s;
+}
+
+
+/*-----HEADER----все,относящееся ко кнопкам входа на сайт-----*/
+
+.header__enter__wrapper {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+    display: inline;
+}
+
+.button {
+    height: 40px;
+    min-width: 80px;
+    background-color: rgb(253, 228, 0);
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-weight: 600;
+    box-shadow: 0px 4px 7px -2px inset #ffffff;
+}
+
+.button:hover {
+    transition-property: background;
+    transition-duration: 0.5s;
+    background-color: rgb(255, 255, 0);
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: rgb(253, 251, 232);
+    transition-property: background;
+    transition-duration: 0.5s;
+}
+
+.button__enter {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.button_register {
+    background-color: rgb(187, 187, 187);
+    margin-left: 5px;
+}
+
+
+/*----все,относящееся к модальным окнам----*/
+
+.modal-wrapper {
+    display: none;
+    background-color: gray;
+    opacity: 0.5;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.element-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.modal-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 400px;
+    background-color: white;
+    z-index: 2;
+}
+
+.modal-enter {
+    display: none;
+}
+
+.modal-call {
+    display: none;
+}
+
+.modal-call .form-enter {
+    padding-bottom: 10px;
+}
+
+.modal-call p {
+    font-size: 1em;
+}
+
+.form-top {
+    background-color: yellow;
+}
+
+.form-top p {
+    margin: 0px;
+    padding: 15px 10px;
+}
+
+.form-top a,
+.form-enter p a {
+    text-decoration: underline;
+}
+
+.element-form input {
+    padding: 10px;
+}
+
+.form-enter {
+    padding: 0px 10px;
+}
+
+
+/*-----------FOOTER---------*/
+
+.footer {
+    background-color: #f8f8fc;
+    grid-area: footer;
+    display: grid;
+    max-height: 60px;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-areas: '. bottom .';
+    justify-content: center;
+    font-size: small;
+    color: rgb(80, 80, 80);
+}
+
+.footer__wrapper {
+    grid-area: bottom;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(189, 189, 189);
+}
+
+.copyright__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0px 5px;
+}
+
+.footer__contacts {
+    justify-self: flex-start;
+    flex-grow: 1;
+}
+
+.footer__contacts__wrapper,
+.header__contacts__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0px 5px;
+}
+
+.footer__menu ul {
+    margin: 0px;
+    display: table;
+    padding: 0px;
+    padding-right: 5px;
+}
+
+.footer__menu li {
+    display: inline-block;
+}
+
+.footer__menu li a {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px;
+    text-decoration: none;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    color: rgb(80, 80, 80);
+}
+
+.footer__menu li a:hover {
+    box-shadow: 0px -17px 20px -6px inset #eceae9;
+}
+
+.footer__menu li a:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.4s;
+    color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    /*----header---*/
+    .header__wrapper {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 'logo phone button' 'nav nav nav';
+        justify-content: space-around;
+    }
+    .header__logo {
+        grid-area: logo;
+        margin-left: 10%;
+    }
+    .header__contacts {
+        grid-area: phone;
+        justify-self: right;
+        margin-right: 5%;
+    }
+    .button__enter {
+        justify-self: right;
+    }
+    .header__menu {
+        grid-area: nav;
+        justify-self: center;
+    }
+    .header__enter {
+        grid-area: button;
+    }
+    /*----footer---*/
+    .footer {
+        padding-bottom: 40px;
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /*----header---*/
+    .header__menu,
+    .header__contacts {
+        justify-self: center;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+    }
+    .footer__menu {
+        order: -1;
+        display: grid;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .footer__copyright {
+        order: 0;
+    }
+    .copyright__wrapper {
+        justify-content: flex-start;
+    }
+    .footer__contacts__wrapper {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'logo  button' 'phone phone' 'nav  nav';
+        justify-content: space-around;
+    }
+    .header__enter {
+        justify-self: flex-end;
+    }
+    .header__logo {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .header__menu {
+        border-top: 1px solid rgb(185, 185, 185);
+        width: 100%;
+    }
+    .header__menu ul {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .footer__menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header__wrapper {
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-start;
+    }
+    .header__enter,
+    .footer__contacts__wrapper {
+        justify-content: center;
+    }
+    .footer__contacts {
+        justify-content: flex-start;
+    }
+    .footer__menu ul {
+        padding-right: 0px;
+    }
+}

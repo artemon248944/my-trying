@@ -1,0 +1,82 @@
+/*--------MAIN----------*/
+
+.main {
+    background-color: #f8f8fc;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: minmax(50px, auto) 1fr;
+    grid-template-areas: '. description .''. vehicles .';
+}
+
+.main__description {
+    grid-area: description;
+}
+
+.main__description h1 {
+    text-align: center;
+}
+
+.main__content {
+    grid-area: vehicles;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 5px rgb(201, 200, 200);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0px 20px 15px 20px;
+}
+
+.main__map iframe {
+    width: 100%;
+    min-height: 400px;
+}
+
+.main__info {
+    display: grid;
+    align-content: center;
+}
+
+.info__logo {
+    width: 50px;
+    text-align: center;
+}
+
+.info__logo i {
+    font-size: 40px;
+}
+
+.info__description {
+    padding: 0px 15px;
+}
+
+.info__description .icon-telegram,
+.info__description .icon-viber {
+    font-size: 1.3em;
+}
+
+.info__point {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .main__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .main__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main__content {
+        margin: 0px;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .main__info {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,67 @@
+/*--------MAIN----------*/
+
+.main {
+    background-color: #f8f8fc;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: minmax(50px, auto) 1fr;
+    grid-template-areas: '. description .''. vehicles .';
+}
+
+.main__description {
+    grid-area: description;
+}
+
+.main__description h1 {
+    text-align: center;
+}
+
+.main__content {
+    grid-area: vehicles;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 5px rgb(201, 200, 200);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 15px 20px;
+}
+
+.main__slider {
+    max-width: 800px;
+    align-self: center;
+}
+
+.model-specs,
+.model__spec {
+    border: 1px solid rgb(182, 181, 181);
+}
+
+.model-specs {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    background-color: #f8f8fc;
+}
+
+.model__spec {
+    flex-grow: 1;
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.model__spec p:first-child {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .main__content {
+        margin: 0px;
+        box-shadow: none;
+        padding: 10px;
+    }
+}

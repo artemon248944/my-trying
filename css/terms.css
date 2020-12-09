@@ -1,0 +1,34 @@
+/*--------MAIN----------*/
+
+.main {
+    background-color: #f8f8fc;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: minmax(50px, auto) 1fr;
+    grid-template-areas: '. description .''. vehicles .';
+}
+
+.main__description {
+    grid-area: description;
+}
+
+.main__description h1 {
+    text-align: center;
+}
+
+.main__content {
+    grid-area: vehicles;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 5px rgb(201, 200, 200);
+    margin: 0px 20px 15px 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .main__content {
+        margin: 0px;
+        box-shadow: none;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,168 @@
+/*--------MAIN----------*/
+
+.main {
+    background-color: #f8f8fc;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    grid-template-rows: minmax(50px, auto) 1fr;
+    grid-template-areas: '. description .''. vehicles .';
+}
+
+.main__description {
+    grid-area: description;
+}
+
+.main__description h1 {
+    text-align: center;
+}
+
+.main__content {
+    grid-area: vehicles;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 5px rgb(201, 200, 200);
+    margin-bottom: 15px;
+    margin: 0px 20px 15px 20px;
+}
+
+
+/*-----------ФОРМА для отзыва-------*/
+
+.form-review {
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+.element-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.input-text {
+    height: 35px;
+}
+
+
+/*----звезды рейтинга---**/
+
+.rating-area {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating-area:not(:checked)>input {
+    display: none;
+}
+
+.rating-area:not(:checked)>label {
+    width: 30px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 25px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.rating-area:not(:checked)>label:before {
+    content: '★';
+}
+
+.rating-area>input:checked~label {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+
+.rating-area:not(:checked)>label:hover,
+.rating-area:not(:checked)>label:hover~label {
+    color: gold;
+}
+
+.rating-area>input:checked+label:hover,
+.rating-area>input:checked+label:hover~label,
+.rating-area>input:checked~label:hover,
+.rating-area>input:checked~label:hover~label,
+.rating-area>label:hover~input:checked~label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+}
+
+.rate-area>label:active {
+    position: relative;
+}
+
+#input-full-review {
+    resize: vertical;
+}
+
+
+/*кнопки формы*/
+
+.button-reset {
+    background-color: rgb(179, 183, 184);
+}
+
+.button-reset:hover {
+    background-color: cadetblue;
+}
+
+
+/*----отзывы о компании---*/
+
+.one-review {
+    border-top: 1px solid rgb(197, 197, 197);
+    padding: 5px 25px;
+}
+
+.review-head {
+    display: flex;
+}
+
+.rating-result {
+    padding-right: 5px;
+}
+
+.rating-result span {
+    padding: 0;
+    font-size: 20px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.rating-result>span:before {
+    content: '★';
+}
+
+.rating-result>span.active {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+
+.rewiew-date {
+    padding-right: 5px;
+}
+
+.text-review {
+    padding-left: 25px;
+    border-left: 5px solid rgb(197, 197, 197);
+}
+
+@media screen and (max-width: 600px) {
+    .main__content {
+        margin: 0px;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .review-head {
+        flex-wrap: wrap;
+    }
+    .rating-result {
+        width: 100%;
+        order: 2;
+    }
+}
