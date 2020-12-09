@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда авто CARRENTAL</title>
+    <link rel="stylesheet" type="text/css" href="css/header_and_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/vehicle.css">
+    <link rel="stylesheet" type="text/css" href="css/brands.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="scripts/my-js.js"></script>
+</head>
+
+<body>
+
+    <header class="header" id="top">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <div class="header__logo-link">
+                    <a href="index.html"><img src="images/logo.png" alt="logo-carrental"></a>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a>
+                    <a href="tg://resolve?domain=Artyom_Ivanou" class="icon-telegram" target="_blank"></a>
+                    <a href="viber://chat?number=%2B375292939956" class="icon-viber" target="_blank"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+            <div class="header__enter">
+                <div class=" header__enter__wrapper">
+                    <button class="button button__enter">Войти</button>
+                    <!--ЗДЕСЬ БУДУТ ВСЕ КНОПКИ С ФОРМАМИ НА СТРАНИЦЕ-->
+                    <!--это затемнение на задний фон формы -->
+                    <div class="modal-wrapper"></div>
+                    <!--форма входа на сайт -->
+                    <div class="modal-window modal-enter">
+                        <div class="form-top">
+                            <p>Войдите или <a href="#">зарегистрируйтесь</a></p>
+                        </div>
+                        <form class="form-enter">
+                            <div class="element-form">
+                                <label for="TextForEnter">Логин</label>
+                                <input id="TextForEnter" type="text" placeholder="Ваш логин" required>
+                            </div>
+                            <div class="element-form">
+                                <label for="TextForPassword">Пароль</label>
+                                <input id="TextForPassword" type="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="buttons-form-wrapper">
+                                <button class="button" type="submit">Войти</button>
+                            </div>
+                            <p>Забыли логин или пароль? <a href="#">Напомим!</a></p>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__calculation">
+            <div class="main__img-filter">
+                <img src="images/Layer1.jpg" alt="road">
+            </div>
+            <div class="calculation__wrapper">
+                <div class="calculation__form">
+                    <h2>Аренда авто по лучшей цене</h2>
+                    <form class="form-calculation">
+                        <div class="form__for_start">
+                            <label class="label-style" for="place_start">Место, дата и время начала аренды</label>
+                            <select name="place_start" id="place_start">
+                                <option value="аэропорт">Национальный аэропорт Минск</option>
+                                <option value="вокзал">Железнодорожный вокзал</option>
+                                <option value="гостиница">Минск/Гостиница DoubleTree by Hilton</option>
+                                <option value="вокзал">Минск/Гостиница Green City</option>
+                                <option value="вокзал">Минск/Гостиница Marriott</option>
+                                <option value="вокзал">Минск/Гостиница Victoria</option>
+                                <option value="вокзал">Минск/Гостиница Crowne Plaza</option>
+                                <option value="вокзал">Минск/Гостиница Renaissance</option>
+                            </select>
+                            <div class="input-wrapper">
+                                <input type="date">
+                                <input type="time">
+                            </div>
+                        </div>
+                        <div class="form__for_finish">
+                            <label class="label-style" for="place_start">Место, дата и время окончания аренды</label>
+                            <select name="place_finish" id="place_finish">
+                                <option value="аэропорт">Национальный аэропорт Минск</option>
+                                <option value="вокзал">Железнодорожный вокзал</option>
+                                <option value="гостиница">Минск/Гостиница DoubleTree by Hilton</option>
+                                <option value="вокзал">Минск/Гостиница Green City</option>
+                                <option value="вокзал">Минск/Гостиница Marriott</option>
+                                <option value="вокзал">Минск/Гостиница Victoria</option>
+                                <option value="вокзал">Минск/Гостиница Crowne Plaza</option>
+                                <option value="вокзал">Минск/Гостиница Renaissance</option>
+                            </select>
+                            <div class="input-wrapper">
+                                <input type="date">
+                                <input type="time">
+                            </div>
+                        </div>
+                        <button class="button button__calculate">Рассчитать стоимость</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main__vehicles">
+            <h1>Категории автомобилей</h1>
+            <a href="#top" class="top-link " title="Наверх"> <img src="images/to-top.png" alt="Наверх"> </a>
+            <!--эконом-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-econom.html">
+                        <img src="images/vw_polo.png" alt="vw_polo" title="">
+                        <p>Эконом от 40 BYN</p>
+                        <p>Пример: Volkswagen Polo Sedan</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">4</span></div>
+                    <div class="symbol__baggage" title="Вместимость багажника"><span class="flaticon-suitcase centered__absolute">3</span></div>
+                    <div class="symbol__door" title="Количество дверей"><span class="flaticon-car-door centered__absolute">4</span></div>
+                    <div class="symbol__transmission" title="Механическая КПП"><span class="flaticon-manual-transmission centered__absolute">M</span></div>
+                </div>
+            </div>
+            <!--бизнес-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-business.html">
+                        <img src="images/Audi_A6.png" alt="Audi_A6" title="">
+                        <p>Бизнес от 80 BYN</p>
+                        <p>Пример: Audi A6</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">5</span></div>
+                    <div class="symbol__baggage" title="Вместимость багажника"><span class="flaticon-suitcase centered__absolute">4</span></div>
+                    <div class="symbol__door" title="Количество дверей"><span class="flaticon-car-door centered__absolute">4</span></div>
+                    <div class="symbol__transmission" title="Автоматическая КПП"><span class="flaticon-automatic-transmission centered__absolute">A</span></div>
+                </div>
+            </div>
+            <!--премиум-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-premium.html">
+                        <img src="images/bmw_7.png" alt="bmw_7" title="">
+                        <p>Премиум от 120 BYN</p>
+                        <p>Пример: BMW 7 series</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">5</span></div>
+                    <div class="symbol__baggage" title="Вместимость багажника"><span class="flaticon-suitcase centered__absolute">4</span></div>
+                    <div class="symbol__door" title="Количество дверей"><span class="flaticon-car-door centered__absolute">4</span></div>
+                    <div class="symbol__transmission" title="Автоматическая КПП"><span class="flaticon-automatic-transmission centered__absolute">A</span></div>
+                </div>
+            </div>
+            <!--электромобили-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-electro.html">
+                        <img src="images/nissan_leaf.png" alt="nissan_leaf" title="">
+                        <p>Электромобили от 50 BYN</p>
+                        <p>Пример: Nissan Leaf</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">4</span></div>
+                    <div class="symbol__baggage" title="Вместимость багажника"><span class="flaticon-suitcase centered__absolute">3</span></div>
+                    <div class="symbol__door" title="Количество дверей"><span class="flaticon-car-door centered__absolute">4</span></div>
+                    <div class="symbol__transmission" title="Автоматическая КПП"><span class="flaticon-automatic-transmission centered__absolute">A</span></div>
+                </div>
+            </div>
+            <!--микроавтобусы-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-bus.html">
+                        <img src="images/tranporter.png" alt="tranporter" title="">
+                        <p>Микроавтобусы от 80 BYN</p>
+                        <p>Пример: Volkswagen Transporter</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">8</span></div>
+                    <div class="symbol__baggage" title="Грузоподъемность (тонны)"><span class="flaticon-weight centered__absolute">1,5</span></div>
+                    <div class="symbol__door" title="Обьем грузового отсека(метры кубические)"><span class="flaticon-block centered__absolute">5,8</span></div>
+                    <div class="symbol__transmission" title="Механическая КПП"><span class="flaticon-manual-transmission centered__absolute">M</span></div>
+                </div>
+            </div>
+            <!--коммерчесский-->
+            <div class="main__type">
+                <div class="vehical__logo">
+                    <a href="cars-commercial.html">
+                        <img src="images/caddy.png" alt="caddy" title="">
+                        <p>Коммерческие от 50 BYN</p>
+                        <p>Пример: Volkswagen Caddy</p>
+                    </a>
+                </div>
+                <div class="vehical__symbols">
+                    <div class="symbol__people" title="Количество пассажиров"><span class="flaticon-user centered__absolute">5</span></div>
+                    <div class="symbol__baggage" title="Грузоподъемность (тонны)"><span class="flaticon-weight centered__absolute">0,8</span></div>
+                    <div class="symbol__door" title="Обьем грузового отсека(метры кубические)"><span class="flaticon-block centered__absolute">3,8</span></div>
+                    <div class="symbol__transmission" title="Механическая КПП"><span class="flaticon-manual-transmission centered__absolute">M</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="main_call">
+
+            <!--Заказать обратный звонок-->
+            <p>Позвони нам! <a href="tel:+375292939956">+375292939956</a></p>
+            <p>или</p><button class="button main__button-call">Заказать обратный звонок</button>
+
+
+        </div>
+        <div class="main__steps">
+            <h2>Всё очень просто!</h2>
+            <div class="main__steps-visual">
+                <div class="step"><span class="icon-id-card"></span>
+                    <p>Водительский стаж не менее года и возраст от 20 лет</p>
+                </div>
+                <div class="main__arrow"></div>
+                <div class="step"><span class="icon-money"></span>
+                    <p>Залог в размере 100 рублей</p>
+                </div>
+                <div class="main__arrow"></div>
+                <div class="step"><span class="icon-meter"></span>
+                    <p>Суточный пробег в 350 км</p>
+                </div>
+            </div>
+            <p>*Залог возвращается после сдачи авто</p>
+            <p>*При возврате авто раньше срока мы возвращаем оплату за все неиспользованные целые сутки аренды</p>
+            <div class="steps__buttons">
+                <!--кнопка заказа обратного звонка и бронирования авто-->
+                <div class="modal-window modal-call">
+                    <div class="form-top">
+                        <p>Оставьте Ваш номер телефона и мы с вами свяжемся в течение 15 минут!</p>
+                    </div>
+                    <form class="form-enter " method="post">
+                        <div class="element-form">
+                            <label for="ClientName">Имя</label>
+                            <input id="ClientName" type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="element-form">
+                            <label for="ClientPhone">Номер телефона</label>
+                            <input id="ClientPhone" type="tel" placeholder="Ваш номер телефона" required>
+                        </div>
+                        <div class="buttons-form-wrapper">
+                            <button class="button" type="submit">Отправить</button>
+                        </div>
+
+                    </form>
+                </div>
+                <button class="button main__button-call button-step">Забронировать авто</button>
+                <form action="terms.html"><button class="button  button-step">Подробнее про условия</button></form>
+
+            </div>
+        </div>
+        <div class="main__service">
+            <h2>Доставка авто</h2>
+            <div class="option__wrapper">
+                <div class="service__option"><span class="icon-location_city"></span>
+                    <p>Доставка / забор авто в пределах города - 20 BYN (10$)</p>
+                </div>
+                <div class="service__option"><span class="icon-plane"></span>
+                    <p>Доставка / забор авто из аэропорта - 40 BYN</p>
+                </div>
+            </div>
+            <h2>Стараемся сделать лучший и удобный сервис</h2>
+            <div class="option__wrapper">
+                <div class="service__option"><span class="icon-volkswagen"></span>
+                    <p>Собственный автопарк из более чем 40 автомобилей</p>
+                </div>
+                <div class="service__option"><span class="icon-repair"></span>
+                    <p>Все авто полностью обслужены на наших СТО и застрахованы по КАСКО</p>
+                </div>
+                <div class="service__option"><span class="icon-like"></span>
+                    <p>Мойка и дезинфекция авто после каждой сдачи</p>
+                </div>
+                <div class="service__option"><span class="icon-earth"></span>
+                    <p>Возможность выезда за рубеж</p>
+                </div>
+                <div class="service__option"><span class="icon-subway"></span>
+                    <p>В двух шагах от метро Институт Культуры</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__copyright">
+                <div class="copyright__wrapper">
+                    <p>&copy; Copyrigt Silvasoft</p>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a> </div>
+            </div>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

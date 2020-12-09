@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volkswagen Polo</title>
+    <link rel="stylesheet" type="text/css" href="css/header_and_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/model.css">
+    <link rel="stylesheet" type="text/css" href="css/vehicle.css">
+    <link rel="stylesheet" type="text/css" href="css/brands.css">
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="scripts/jquery.bxslider.min.js"></script>
+    <script src="scripts/my-js.js"></script>
+</head>
+
+<body>
+
+    <header class="header" id="top">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <div class="header__logo-link">
+                    <a href="index.html"><img src="images/logo.png" alt="logo-carrental"></a>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a>
+                    <a href="tg://resolve?domain=Artyom_Ivanou" class="icon-telegram" target="_blank"></a>
+                    <a href="viber://chat?number=%2B375292939956" class="icon-viber" target="_blank"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+            <div class="header__enter">
+                <div class=" header__enter__wrapper">
+                    <!--<button class="button button_register">Зарегистрироваться</button>!-->
+                    <button class="button button__enter">Войти</button>
+                    <!--это затемнение на задний фон формы -->
+                    <div class="modal-wrapper"></div>
+                    <!--форма входа на сайт -->
+                    <div class="modal-window modal-enter">
+                        <div class="form-top">
+                            <p>Войдите или <a href="#">зарегистрируйтесь</a></p>
+                        </div>
+                        <form class="form-enter">
+                            <div class="element-form">
+                                <label for="TextForEnter">Логин</label>
+                                <input id="TextForEnter" type="text" placeholder="Ваш логин" required>
+                            </div>
+                            <div class="element-form">
+                                <label for="TextForPassword">Пароль</label>
+                                <input id="TextForPassword" type="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="buttons-form-wrapper">
+                                <button class="button" type="submit">Войти</button>
+                            </div>
+                            <p>Забыли логин или пароль? <a href="#">Напомим!</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__description">
+            <h1>Эконом: Volkswagen Polo</h1>
+            <a href="#top" class="top-link" title="Наверх"> <img src="images/to-top.png" alt="Наверх"> </a>
+        </div>
+        <div class="main__content">
+            <div class="main__slider">
+                <ul class="bxslider">
+                    <li><img src="images/slider/1.jpg" alt="vw-polo"></li>
+                    <li><img src="images/slider/2.jpg" alt="vw-polo"></li>
+                    <li><img src="images/slider/3.jpg" alt="vw-polo"></li>
+                    <li><img src="images/slider/4.jpg" alt="vw-polo"></li>
+                </ul>
+            </div>
+            <p>Volkswagen Polo Sedan — модель, созданная на базе хэтчбека Polo специально для России и рынков развивающихся стран. Мировой дебют Polo Sedan состоялся 2 июня на Московском автосалоне 2010 года. В 2015 году компания представила на российском
+                рынке обновлённую версию. От прежнего седан отличают изменения в экстерьере (новые передний и задний бамперы, новая оптика, изменённая решётка радиатора, изменившийся дизайн колёсных дисков, новые цвета кузова). Отличия есть и в интерьере:
+                доступны новые варианты обивки и отделки, установлено новое рулевое колесо. Для обновлённой модели также добавился ряд функций, например, стали доступны складывающиеся зеркала и передние датчики парковки, биксеноновые фары, омыватели фар
+                и другое оборудование. Первоначально седан предлагался с прежними силовыми агрегатами, но в конце 2015 года линейка моторов была обновлена.</p>
+            <div class="model-specs">
+                <div class="model__spec model-volume">
+                    <p>Объем</p>
+                    <p>1,6 л.</p>
+                </div>
+                <div class="model__spec model-power">
+                    <p>Мощность</p>
+                    <p>85 л.с</p>
+                </div>
+                <div class="model__spec model-consumption">
+                    <p>Расход</p>
+                    <p>6,4 л.</p>
+                </div>
+                <div class="model__spec model-fuel">
+                    <p>Топливо</p>
+                    <p>АИ-95</p>
+                </div>
+                <div class="model__spec model-transmission">
+                    <p>Трансмиссия</p>
+                    <p>МКПП</p>
+                </div>
+                <div class="model__spec model-drive-unit">
+                    <p>Привод</p>
+                    <p>Передний</p>
+                </div>
+                <div class="model__spec model-passangers">
+                    <p>Кол-во мест</p>
+                    <p>5 мест</p>
+                </div>
+                <div class="model__spec model-doors">
+                    <p>Кол-во дверей</p>
+                    <p>4 двери</p>
+                </div>
+                <div class="model__spec model-clearance">
+                    <p>Клиренс</p>
+                    <p>163 мм.</p>
+                </div>
+                <div class="model__spec model-baggage">
+                    <p>Объем багажника</p>
+                    <p>460 л.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__copyright">
+                <div class="copyright__wrapper">
+                    <p>&copy; Copyrigt Silvasoft</p>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a> </div>
+            </div>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

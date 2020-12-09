@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда авто CARRENTAL</title>
+    <link rel="stylesheet" type="text/css" href="css/header_and_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/cars.css">
+    <link rel="stylesheet" type="text/css" href="css/vehicle.css">
+    <link rel="stylesheet" type="text/css" href="css/brands.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="scripts/my-js.js"></script>
+</head>
+
+<body>
+
+    <header class="header" id="top">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <div class="header__logo-link">
+                    <a href="index.html"><img src="images/logo.png" alt="logo-carrental"></a>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a>
+                    <a href="tg://resolve?domain=Artyom_Ivanou" class="icon-telegram" target="_blank"></a>
+                    <a href="viber://chat?number=%2B375292939956" class="icon-viber" target="_blank"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+            <div class="header__enter">
+                <div class=" header__enter__wrapper">
+                    <!--<button class="button button_register">Зарегистрироваться</button>!-->
+                    <button class="button button__enter">Войти</button>
+                    <!--это затемнение на задний фон формы -->
+                    <div class="modal-wrapper"></div>
+                    <!--форма входа на сайт -->
+                    <div class="modal-window modal-enter">
+                        <div class="form-top">
+                            <p>Войдите или <a href="#">зарегистрируйтесь</a></p>
+                        </div>
+                        <form class="form-enter">
+                            <div class="element-form">
+                                <label for="TextForEnter">Логин</label>
+                                <input id="TextForEnter" type="text" placeholder="Ваш логин" required>
+                            </div>
+                            <div class="element-form">
+                                <label for="TextForPassword">Пароль</label>
+                                <input id="TextForPassword" type="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="buttons-form-wrapper">
+                                <button class="button" type="submit">Войти</button>
+                            </div>
+                            <p>Забыли логин или пароль? <a href="#">Напомим!</a></p>
+                        </form>
+                    </div>
+                    <!--кнопка заказа обратного звонка и бронирования авто-->
+                    <div class="modal-window modal-call">
+                        <div class="form-top">
+                            <p>Оставьте Ваш номер телефона и мы с вами свяжемся в течение 15 минут!</p>
+                        </div>
+                        <form class="form-enter " method="post">
+                            <div class="element-form">
+                                <label for="ClientName">Имя</label>
+                                <input id="ClientName" type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="element-form">
+                                <label for="ClientPhone">Номер телефона</label>
+                                <input id="ClientPhone" type="tel" placeholder="Ваш номер телефона" required>
+                            </div>
+                            <div class="buttons-form-wrapper">
+                                <button class="button" type="submit">Отправить</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__description">
+            <h1>Наш автопарк</h1>
+            <a href="#top" class="top-link" title="Наверх"> <img src="images/to-top.png" alt="Наверх"> </a>
+        </div>
+        <div class="main__vehicles">
+            <nav class="car-list">
+                <ul>
+                    <li><a href="cars.html">Весь автопарк</a> </li>
+                    <li class="cars-type">
+                        <a href="cars-econom.html" rel="noopener noreferrer" class="type__more-link">Эконом<span class="more">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="vw-polo.html" target="_blank" rel="noopener noreferrer">Volkswagen Polo</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Renault Logan</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Kia Rio</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Lada Vesta</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Skoda Rapid</a> </li>
+                        </ul>
+                    </li>
+                    <li class="cars-type">
+                        <a href="cars-business.html" rel="noopener noreferrer" class="type__more-link">Бизнес<span class="more">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Mercedes-Benz E Class</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">BMW 5 series</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Audi A6</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Kia Stinger</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Volvo S60</a> </li>
+                        </ul>
+                    </li>
+                    <li class="cars-type"> <a href="cars-premium.html" rel="noopener noreferrer" class="type__more-link">Премиум<span class="more">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Mercedes-Benz S Class</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">BMW 7 series</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Audi A8</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Bentley Continental</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Volvo S90</a> </li>
+                        </ul>
+                    </li>
+                    <li class="cars-type"> <a href="cars-electro.html" rel="noopener noreferrer" class="type__more-link">Электромобили<span class="more">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Nissan Leaf</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">BMW i3</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Tesla Model 3</a> </li>
+                            <!--<li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Hyundai Ioniq Electric1</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Chevrolet Bolt1</a> </li>!-->
+                        </ul>
+                    </li>
+                    <li class="cars-type"> <a href="cars-bus.html" rel="noopener noreferrer class=" class="type__more-link">Микроавтобусы<span class="more">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Volkswagen Transporter</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Ford Transit</a> </li>
+                            <!-- <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Citroen SpaceTourer</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Hyundai H-1</a> </li>-->
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Mercedes-Benz V-Class</a> </li>
+                        </ul>
+                    </li>
+                    <li class="cars-type"> <a href="cars-commercial.html" rel="noopener noreferrer" class="type__more-link">Коммерческие<span class="more-arrow">>></span></a>
+                        <ul class="hidden-type">
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Fiat Doblo</a> </li>
+                            <!--  <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Renault Dokker</a> </li>-->
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Lada Largus</a> </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Volkswagen Caddy</a> </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="description-car">
+
+                <div class="premium">
+                    <div class="one-position">
+                        <div class="position-img"> <img src="images/cars/mers-s-class.png" alt="mers-s-class" title=""></div>
+                        <div class="position-head">
+                            <p>Mercedes-Benz S-class </p>
+                            <p>140 BYN<span class="property-changed">/сутки</span></p>
+                        </div>
+                        <div class="position-rent">
+                            <p>Период аренды: <span class="rent-date"> макс. 1 год</span></p>
+                            <p>Период бронирования: <span class="rent-date"> макс. 3 мес.</span></p>
+                        </div>
+                        <div class="position-spec">
+                            <div class="description__car-type">Тип:<span class="property-changed">премиум</span></div>
+                            <div class="description__mileage">Пробег:<span class="property-changed">неограничен</span></div>
+                            <div class="description__detalis">
+                                <a href="#">>> Подробнее</a>
+                            </div>
+                            <button class="button button-book">Заказать сейчас</button>
+                        </div>
+                    </div>
+                    <div class="one-position">
+                        <div class="position-img"> <img src="images/cars/bmw-7-series.png" alt="bmw-7-series" title=""></div>
+                        <div class="position-head">
+                            <p>BMW 7 series </p>
+                            <p>140 BYN<span class="property-changed">/сутки</span></p>
+                        </div>
+                        <div class="position-rent">
+                            <p>Период аренды: <span class="rent-date"> макс. 1 год</span></p>
+                            <p>Период бронирования: <span class="rent-date"> макс. 3 мес.</span></p>
+                        </div>
+                        <div class="position-spec">
+                            <div class="description__car-type">Тип:<span class="property-changed">премиум</span></div>
+                            <div class="description__mileage">Пробег:<span class="property-changed">неограничен</span></div>
+                            <div class="description__detalis">
+                                <a href="#">>> Подробнее</a>
+                            </div>
+                            <button class="button button-book">Заказать сейчас</button>
+                        </div>
+                    </div>
+                    <div class="one-position">
+                        <div class="position-img"> <img src="images/cars/audi-a8.png" alt="audi-a8" title=""></div>
+                        <div class="position-head">
+                            <p>Audi A8 </p>
+                            <p>140 BYN<span class="property-changed">/сутки</span></p>
+                        </div>
+                        <div class="position-rent">
+                            <p>Период аренды: <span class="rent-date"> макс. 1 год</span></p>
+                            <p>Период бронирования: <span class="rent-date"> макс. 3 мес.</span></p>
+                        </div>
+                        <div class="position-spec">
+                            <div class="description__car-type">Тип:<span class="property-changed">премиум</span></div>
+                            <div class="description__mileage">Пробег:<span class="property-changed">неограничен</span></div>
+                            <div class="description__detalis">
+                                <a href="#">>> Подробнее</a>
+                            </div>
+                            <button class="button button-book">Заказать сейчас</button>
+                        </div>
+                    </div>
+                    <div class="one-position">
+                        <div class="position-img"> <img src="images/cars/bentley-continental.png" alt="bentley-continental" title=""></div>
+                        <div class="position-head">
+                            <p>Bentley Continental </p>
+                            <p>200 BYN<span class="property-changed">/сутки</span></p>
+                        </div>
+                        <div class="position-rent">
+                            <p>Период аренды: <span class="rent-date"> макс. 1 год</span></p>
+                            <p>Период бронирования: <span class="rent-date"> макс. 3 мес.</span></p>
+                        </div>
+                        <div class="position-spec">
+                            <div class="description__car-type">Тип:<span class="property-changed">премиум</span></div>
+                            <div class="description__mileage">Пробег:<span class="property-changed">неограничен</span></div>
+                            <div class="description__detalis">
+                                <a href="#">>> Подробнее</a>
+                            </div>
+                            <button class="button button-book">Заказать сейчас</button>
+                        </div>
+                    </div>
+                    <div class="one-position">
+                        <div class="position-img"> <img src="images/cars/volvo-s90.png" alt="volvo-s90" title=""></div>
+                        <div class="position-head">
+                            <p>Volvo S90 </p>
+                            <p>120 BYN<span class="property-changed">/сутки</span></p>
+                        </div>
+                        <div class="position-rent">
+                            <p>Период аренды: <span class="rent-date"> макс. 1 год</span></p>
+                            <p>Период бронирования: <span class="rent-date"> макс. 3 мес.</span></p>
+                        </div>
+                        <div class="position-spec">
+                            <div class="description__car-type">Тип:<span class="property-changed">премиум</span></div>
+                            <div class="description__mileage">Пробег:<span class="property-changed">неограничен</span></div>
+                            <div class="description__detalis">
+                                <a href="#">>> Подробнее</a>
+                            </div>
+                            <button class="button button-book">Заказать сейчас</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__copyright">
+                <div class="copyright__wrapper">
+                    <p>&copy; Copyrigt Silvasoft</p>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a> </div>
+            </div>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

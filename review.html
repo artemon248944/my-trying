@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" type="text/css" href="css/header_and_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/review.css">
+    <link rel="stylesheet" type="text/css" href="css/vehicle.css">
+    <link rel="stylesheet" type="text/css" href="css/brands.css">
+    <script src="https://kit.fontawesome.com/09bbd2a7ea.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="scripts/my-js.js"></script>
+</head>
+
+<body>
+
+    <header class="header" id="top">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <div class="header__logo-link">
+                    <a href="index.html"><img src="images/logo.png" alt="logo-carrental"></a>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a>
+                    <a href="tg://resolve?domain=Artyom_Ivanou" class="icon-telegram" target="_blank"></a>
+                    <a href="viber://chat?number=%2B375292939956" class="icon-viber" target="_blank"></a>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+            <div class="header__enter">
+                <div class=" header__enter__wrapper">
+                    <!--<button class="button button_register">Зарегистрироваться</button>!-->
+                    <button class="button button__enter">Войти</button>
+                    <!--это затемнение на задний фон формы -->
+                    <div class="modal-wrapper"></div>
+                    <!--форма входа на сайт -->
+                    <div class="modal-window modal-enter">
+                        <div class="form-top">
+                            <p>Войдите или <a href="#">зарегистрируйтесь</a></p>
+                        </div>
+                        <form class="form-enter">
+                            <div class="element-form">
+                                <label for="TextForEnter">Логин</label>
+                                <input id="TextForEnter" type="text" placeholder="Ваш логин" required>
+                            </div>
+                            <div class="element-form">
+                                <label for="TextForPassword">Пароль</label>
+                                <input id="TextForPassword" type="password" placeholder="Ваш пароль" required>
+                            </div>
+                            <div class="buttons-form-wrapper">
+                                <button class="button" type="submit">Войти</button>
+                            </div>
+                            <p>Забыли логин или пароль? <a href="#">Напомим!</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__description">
+            <h1>Отзывы</h1>
+            <a href="#top" class="top-link" title="Наверх"> <img src="images/to-top.png" alt="Наверх"> </a>
+        </div>
+        <div class="main__content">
+            <div class="form-review">
+                <form method="POST">
+                    <div class="element-form"><label class="label-style" for="input-name">Ваше имя</label>
+                        <input type="text" name="input-name" id="input-name" class="input-text" required></div>
+
+                    <div class="element-form"> <label class="label-style" for="input-email">Ваш email</label>
+                        <input type="text" name="input-email" id="input-email" class="input-text" required></div>
+
+                    <div class="element-form"><label class="label-style" for="input-short-review">Кратко</label>
+                        <input type="text" name="input-short-review" id="input-short-review" class="input-text" required></div>
+
+                    <div class="element-form">
+                        <p>Рейтинг</p>
+                        <div class="rating-area">
+                            <input type="radio" id="star-5" name="rating" value="5">
+                            <label for="star-5" title="Оценка «5»"></label>
+                            <input type="radio" id="star-4" name="rating" value="4">
+                            <label for="star-4" title="Оценка «4»"></label>
+                            <input type="radio" id="star-3" name="rating" value="3">
+                            <label for="star-3" title="Оценка «3»"></label>
+                            <input type="radio" id="star-2" name="rating" value="2">
+                            <label for="star-2" title="Оценка «2»"></label>
+                            <input type="radio" id="star-1" name="rating" value="1">
+                            <label for="star-1" title="Оценка «1»"></label>
+                        </div>
+                    </div>
+
+                    <div class="element-form"><label class="label-style" for="input-full-review">Ваше отзыв</label>
+                        <textarea name="input-full-review" id="input-full-review" cols="30" rows="10"></textarea></div>
+                    <button class="button" type="submit">Отправить</button>
+                    <button type="reset" class="button button-reset">Сброс</button>
+                </form>
+            </div>
+            <ul>
+                <li>Ваш отзыв необходим нам, чтобы понять, в каком направлении совершенствовать сервис. Помогите сделать наш прокат ещё лучше!
+                </li>
+                <li>Отзывы, впечатления о техническом состоянии модели, скорости её доставки и уровне обслуживания будут полезны другим пользователям, стоящим перед выбором, поэтому прокат авто это не просто выбор, а тщательное изучение условий и отзывов.
+                </li>
+                <li>Администрация обязательно отреагирует на ваш отзыв!
+                </li>
+            </ul>
+            <div class="one-review">
+                <div class="review-head">
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                    <div class="rewiew-date">12 июня 2020,</div>
+                    <div class="review-author"> автор <span class="author-name">Kirill</span></div>
+                </div>
+                <div class="short-review">
+                    <p>Отличный Сервис</p>
+                </div>
+                <div class="text-review">
+                    <p>Брал kio rio 2019 года на сутки. Мне всё понравилось. Машинка отличная, цена приемлемая. Что порадовала, я проехал немного больше установлиного лимита в сутки, а доплатить денюшек не попросили. Вообщем здорово! Буду ещё в этом автопрокате
+                        брать машинку при надобности. Берите и Вы и не пожалеете об этом!) Процветание вашему бизнесу!</p>
+                </div>
+            </div>
+            <div class="one-review">
+                <div class="review-head">
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                    </div>
+                    <div class="rewiew-date">1 мая 2020,</div>
+                    <div class="review-author"> автор <span class="author-name">Александр</span></div>
+                </div>
+                <div class="short-review">
+                    <p>Сервис На Высоте</p>
+                </div>
+                <div class="text-review">
+                    <p>Много писать не буду. Брал форд на неделю. Арендовал минивэн быстро. Сдал быстро. Поломок не было. В Литву выезжал без проблем. Процветания вашему делу.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__copyright">
+                <div class="copyright__wrapper">
+                    <p>&copy; Copyrigt Silvasoft</p>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__wrapper"> <a href="tel:+375292939956"><span class="icon-mobile"></span>+375292939956</a> </div>
+            </div>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="index.html"><span class="menu-description">Главная</span> </a></li>
+                    <li><a href="cars.html"><span class="menu-description">Автопарк</span> </a></li>
+                    <li><a href="terms.html"><span class="menu-description">Условия аренды</span> </a></li>
+                    <li><a href="contacts.html"><span class="menu-description">Контакты</span> </a></li>
+                    <li><a href="review.html"><span class="menu-description">Отзывы</span> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
